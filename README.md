@@ -1,2 +1,12 @@
 # EtapaTec.CimatecJr_Enzo
-Esta é a entrega do projeto da etapa técnica de Enzo Moitinho Almeida para o processo seletivo da Cimatec Jr.
+• Nome Completo do Candidato: Enzo Moitinho Almeida;
+
+• Semestre Atual: 1º Semestre;
+
+• Tema escolhido para a landing page: Combate à Fome (Projeto Mesa Viva; da empresa Prato Cheio);
+
+• Tecnologias utilizadas:
+
+• Link do projeto hospedado:
+
+• Link do protótipo no Figma:
