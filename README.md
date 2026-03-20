@@ -9,4 +9,4 @@
 
 • Link do projeto hospedado:
 
-• Link do protótipo no Figma:
+• Link do protótipo no Figma: https://www.figma.com/make/Zs9ZE89I2iCXZWCqu3TjjI/Projeto-Mesa-Viva---Cimatec-Jr.?t=G4q7tKwpFtabVmlN-6
