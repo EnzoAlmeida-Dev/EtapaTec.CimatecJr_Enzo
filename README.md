@@ -1,11 +1,14 @@
-# EtapaTec.CimatecJr_Enzo
+# ETAPA TÉCNICA - CIMATEC JR.
+
+## Este repositório foi criado com o intuito de organizar e preparar o envio do projeto solicitado pelo Núcleo de Projetos de Computação (NPCP) da empresa júnior do SENAI CIMATEC. Este repositório está estruturado de modo a apresentar todos os arquivos utilizados na criação do site, bem como arquvos de HTML (index.html; donate.html), CSS (style.css), JavaScript e a pasta img, que contém as imagens utilizadas.
+
 • Nome Completo do Candidato: Enzo Moitinho Almeida;
 
 • Semestre Atual: 1º Semestre;
 
 • Tema escolhido para a landing page: Combate à Fome (Projeto Mesa Viva; da empresa Prato Cheio);
 
-• Tecnologias utilizadas:
+• Tecnologias utilizadas: HTML, CSS e JavaScript
 
 • Link do projeto hospedado:
 
