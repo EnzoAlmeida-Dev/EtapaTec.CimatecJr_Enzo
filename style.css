@@ -110,7 +110,6 @@ abbr {
     bottom: 70px;
     transform: translateX(-50%);
     text-decoration: none;
-    color: whitesmoke;
     display: inline-block;
     background-color: #e65729;
     color: whitesmoke;
@@ -173,6 +172,8 @@ abbr {
     aspect-ratio: 16 / 9;
     object-fit: cover;
     margin: 10px;
+    transition: 0.3s ease;
+    border-radius: 20px;
 }
 
 .gallery div {
@@ -182,6 +183,80 @@ abbr {
     align-items: center;
     gap: 20px;
     max-width: 100%;
-    margin: 20px auto 40px;
     padding: 20px;
+    
+}
+
+.gallery img:hover {
+    transform: scale(1.025);
+    filter: brightness(0.8);
+}
+
+.cities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 30px;
+    max-width: 600px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+}
+
+.city {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    color: whitesmoke;
+}
+
+.city::before {
+    content: "• ";
+}
+
+.map {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    background-color: #333333;
+}
+
+.map p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: whitesmoke;
+    max-width: 700px;
+    text-align: justify;
+    margin-top: 12px;
+    margin-left: 40px;
+}
+
+.map h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    font-size: 75px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.map .expt{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 700px;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 75px;
+    display: inline-block;
+    background-color: #e65729;
+    color: whitesmoke;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 20px;
 }
