@@ -287,11 +287,15 @@ abbr {
 }
 
 .donate{
+   position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: whitesmoke;
+    background-image: url("img/donateebg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
@@ -301,10 +305,32 @@ abbr {
 }
 
 .donate h1 {
-  font-family: "Playfair Display", serif;
-  font-weight: 900;
-  font-size: 65px;
-    margin-top: 48px;
+        position: absolute;
+        top: 85px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        font-family: "Playfair Display", serif;
+        font-weight: 900;
+        font-size: 65px;
+}
+
+.donate h2 {
+        position: absolute;
+        top: 195px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+
 }
 
 .doacao1 {
@@ -318,4 +344,49 @@ abbr {
 
 .donate .btn {
   display: inline-block;
+    background-color: #e65729;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 12px 25px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+.donate .btn:hover {
+    background-color: #841800;
+}
+
+.rodape {
+    background-color: #333333;
+    color: whitesmoke;
+    display: flex;
+    padding: 40px 20px;
+}
+
+.rodape footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 30px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+}
+
+.rodape div{
+    flex: 1;
+    text-align: justify;
+}
+
+.rodape h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.rodape p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
 }
