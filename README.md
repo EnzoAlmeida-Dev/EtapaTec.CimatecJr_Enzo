@@ -10,7 +10,7 @@ Este repositório foi criado com o intuito de organizar e preparar o envio do pr
 
 • Tema escolhido para a landing page: Combate à Fome (Projeto Mesa Viva; da empresa Prato Cheio);
 
-• Tecnologias utilizadas: HTML, CSS e JavaScript
+• Tecnologias utilizadas: VS Code, HTML, CSS, JavaScript e FIGMA.
 
 • Link do projeto hospedado:
 
