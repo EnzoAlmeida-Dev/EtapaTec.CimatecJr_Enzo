@@ -1,5 +1,5 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/main_page/index.html" }
+  "redirects": [
+    { "source": "/", "destination": "/main_page/index.html", "permanent": false }
   ]
 }
