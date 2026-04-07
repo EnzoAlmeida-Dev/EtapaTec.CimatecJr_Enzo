@@ -18,20 +18,24 @@ body {
     text-align: center;
     justify-content: flex-start;
     min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
     width: 100%;
-    background-image: url(img/donatepagebg.jpeg);
+    padding: clamp(0.8rem, 2.5vw, 1.25rem);
+    background-image: url("../../img/donatepagebg.jpeg");
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: scroll;
     color: whitesmoke;
 }
 
 header h1 {
     font-family: "Playfair Display", serif;
     font-weight: 900;
-    font-size: 65px;
-    margin-top: 85px;
-    margin-bottom: 40px;
+    font-size: clamp(2rem, 6.2vw, 4.06rem);
+    margin-top: clamp(2.2rem, 8vw, 5.3rem);
+    margin-bottom: clamp(1rem, 4vw, 2.5rem);
 }
 
 header h3 {
@@ -39,26 +43,27 @@ header h3 {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: clamp(1rem, 2.1vw, 1.25rem);
     margin-top: auto;
-    margin-bottom: 40px;
+    margin-bottom: clamp(1rem, 4vw, 2.5rem);
+    padding: 0 clamp(0.6rem, 3vw, 1.2rem);
 }
 
 .txt {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: clamp(0.5rem, 1.8vw, 0.75rem);
     text-align: justify;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    padding: 10px;
-    font-size: 15px;
+    padding: clamp(0.6rem, 2.5vw, 0.9rem);
+    font-size: clamp(0.92rem, 1.8vw, 1rem);
     margin-top: auto;
-    max-width: 400px;
-    margin-bottom: 45px;
+    max-width: clamp(18rem, 72vw, 25rem);
+    margin-bottom: clamp(1.2rem, 4.5vw, 2.8rem);
 }
 
 .txt p {
@@ -67,14 +72,14 @@ header h3 {
 
 main a {
     display: inline-block;
-    padding: 12px 20px;
-    border-radius: 25px;
+    padding: clamp(0.6rem, 1.8vw, 0.8rem) clamp(1rem, 3.3vw, 1.56rem);
+    border-radius: clamp(0.8rem, 2vw, 1.56rem);
     background-color: #e65729;
     color: whitesmoke;
     text-decoration: none;
     font-family: "Playfair Display", serif;
     font-weight: 900;
-    font-size: 18px;
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
 }
 
 main a:hover {
@@ -86,7 +91,17 @@ main a:hover {
     color: #e65729;
     font-family: "Playfair Display", serif;
     font-weight: 900;
-    font-size: 65px;
-    margin-top: 85px;
-    margin-bottom: 40px;
+    font-size: clamp(2rem, 6.2vw, 4.06rem);
+    margin-top: clamp(2.2rem, 8vw, 5.3rem);
+    margin-bottom: clamp(1rem, 4vw, 2.5rem);
+}
+
+@media (max-width: 480px) {
+    .txt {
+        text-align: left;
+    }
+
+    .txt p {
+        text-indent: 1em;
+    }
 }

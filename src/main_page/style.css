@@ -102,14 +102,29 @@ body {
 }
 
 .intro{
-    background-image: url("img/introbg1.jpg");
+    background-image: url("../../img/introbg1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    padding: clamp(1.5rem, 5vw, 3rem) clamp(0.9rem, 4vw, 2rem) clamp(2rem, 6vw, 4rem);
     color: whitesmoke;
     margin-top: clamp(2.8rem, 5vw, 3.1rem);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.intro header,
+.intro main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 abbr {
@@ -124,7 +139,7 @@ abbr {
     color: #e65729;
     font-style: normal;
     font-size: clamp(1.5rem, 4.2vw, 2.5rem);
-    margin-top: clamp(1.5rem, 5vw, 3rem);
+    margin-top: 0;
     text-align: center;
 }
 
@@ -136,7 +151,8 @@ abbr {
      justify-content: center;
      align-items: center;
      text-align: center;
-     margin-top: clamp(1rem, 3vw, 3rem);
+    line-height: 0.95;
+        margin-top: clamp(0.4rem, 1.8vw, 1rem);
 }
 
 .intro h2{
@@ -145,15 +161,18 @@ abbr {
     align-items: center;
     text-align: center;
     font-size: clamp(1rem, 2.1vw, 1.35rem);
-    margin-top: clamp(1rem, 3vw, 3rem);
+    margin-top: clamp(0.4rem, 1.8vw, 1rem);
     padding: 0 clamp(0.9rem, 4vw, 2rem);
 }
 
+.intro main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1rem, 2.5vw, 2rem);
+}
+
 .intro a{
-    position: absolute;
-    left: 50%;
-    bottom: clamp(3rem, 12vw, 8rem);
-    transform: translateX(-50%);
     display: inline-block;
     background-color: #e65729;
     color: whitesmoke;
@@ -161,11 +180,38 @@ abbr {
     font-size: clamp(0.95rem, 1.8vw, 1.15rem);
     text-decoration: none;
     border-radius: 6px;
+    margin-top: clamp(0.8rem, 2.5vw, 1.5rem);
     transition: 0.3s;
 }
 
 .intro a:hover {
     background-color: #841800;
+}
+
+@media (max-width: 768px) {
+    .intro {
+        padding: clamp(1.25rem, 5vw, 2rem) clamp(0.75rem, 4vw, 1.25rem) clamp(1.75rem, 6vw, 2.5rem);
+    }
+
+    .intro p {
+        margin-top: clamp(0.75rem, 3vw, 1.5rem);
+    }
+
+    .intro h1 {
+        font-size: clamp(2rem, 10vw, 4rem);
+        margin-top: clamp(0.65rem, 2.5vw, 1.25rem);
+    }
+
+    .intro h2 {
+        font-size: clamp(0.95rem, 3.2vw, 1.1rem);
+        margin-top: clamp(0.85rem, 3vw, 1.5rem);
+        padding: 0 clamp(0.25rem, 2vw, 1rem);
+    }
+
+    .intro a {
+        font-size: clamp(0.92rem, 3vw, 1rem);
+        padding: 0.7rem 1rem;
+    }
 }
 
 .gallery {
@@ -244,8 +290,8 @@ abbr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: clamp(0.5rem, 1.5vw, 0.95rem) clamp(0.9rem, 3vw, 1.9rem);
-    max-width: 600px;
-    margin-left: clamp(0.9rem, 4.5vw, 2.5rem);
+    width: min(100%, 600px);
+    margin-left: 0;
     margin-bottom: clamp(1.5rem, 5vw, 3.1rem);
 }
 
@@ -300,7 +346,7 @@ abbr {
     max-width: 700px;
     text-align: justify;
     margin-top: clamp(0.5rem, 1.5vw, 0.8rem);
-    margin-left: clamp(0.9rem, 4.5vw, 2.5rem);
+    margin-left: 0;
 }
 
 .map h1 {
@@ -310,7 +356,7 @@ abbr {
     margin: 0;
     padding: 0;
     text-align: left;
-    margin-left: clamp(0.9rem, 4.5vw, 2.5rem);
+    margin-left: 0;
 }
 
 .map .expt{
@@ -334,10 +380,10 @@ abbr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: clamp(1rem, 2.8vw, 2rem);
     padding: clamp(3.2rem, 8vw, 5rem) clamp(0.9rem, 4vw, 1.5rem) clamp(2rem, 6vw, 3.5rem);
-    background-image: url("img/donateebg.jpg");
+    background-image: url("../../img/donateebg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -409,13 +455,13 @@ abbr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: clamp(0.6rem, 1.7vw, 0.95rem) clamp(1rem, 3.2vw, 1.9rem);
-    width: 100%;
-    margin-left: clamp(0.9rem, 4.5vw, 2.5rem);
-    margin-bottom: clamp(1.5rem, 5vw, 3.1rem);
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    align-items: start;
 }
 
 .rodape div{
-    flex: 1;
+    min-width: 0;
     text-align: justify;
 }
 
@@ -432,25 +478,21 @@ abbr {
     font-weight: 400;
     font-style: normal;
     font-size: clamp(0.92rem, 1.7vw, 1rem);
+    line-height: 1.55;
 }
 
 @media (max-width: 445px) {
     .rodape footer {
         grid-template-columns: 1fr;
-        margin-left: 0;
-        margin-bottom: 0;
     }
 
     .cities-grid {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 100%;
-        margin-left: 0;
+        width: 100%;
     }
 
-    .map p,
-    .map h1,
-    .map .expt {
-        margin-left: 0;
+    .rodape div {
+        text-align: left;
     }
 }
 
@@ -459,4 +501,3 @@ max-width: 100%;
 height: auto;
 display: block;
 }
-
