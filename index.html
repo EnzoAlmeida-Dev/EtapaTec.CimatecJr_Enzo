@@ -10,19 +10,19 @@
     
     <body>
         <section id="barra" class="barra">
-            <button onclick="togglemenu()" class="menubtn">☰</button>
+            <button type="button" onclick="abrefechamenu()" class="menubtn">☰</button>
             <p>Prato Cheio ORG.</p>
         </section>
         <nav id="menu" class="menu">
-            <button onclick="togglemenu()" class="menubtn">☰</button>
-            <a href="#intro">Início</a>
-            <a href="#gallery">Sobre</a>
-            <a href="#map">Doação</a>
-            <a href="#donate">Contato</a>
-            <a href="#rodape">Contato</a>
+            <a onclick="abrefechamenu()" href="#intro">Início</a>
+            <a onclick="abrefechamenu()" href="#gallery">Sobre</a>
+            <a onclick="abrefechamenu()" href="#map">Extensão Territorial</a>
+            <a onclick="abrefechamenu()" href="#donate">Doação</a>
+            <a onclick="abrefechamenu()" href="#rodape">Contato</a>
+            <p>Uma Iniciativa PRATO CHEIO©.</p>
         </nav>
         <section id="intro" class="intro">
-        <header><p><abbr title="Uma Iniciativa PRATO CHEIO."><strong>PROJETO MESA VIVA.</strong></abbr></p><br>
+        <header><p><abbr title="Uma Iniciativa PRATO CHEIO©."><strong>PROJETO MESA VIVA.</strong></abbr></p>
             <h1>Pouco para você. </h1><h1>Tudo para alguém.</h1>
         </header>
         <main>
@@ -91,8 +91,15 @@
         (11) 99999-9999 <br>
         contato@pratocheio.org.br <br></p></div>
         <div><h3>Créditos <br></h3>
-        <p>Design humanitário criado com propósito. <br>As imagens utilizadas são de caráter ilustrativo de nossos projetos e parceiros globais.</a></p></div>
+        <p>Design humanitário criado com propósito. <br>As imagens utilizadas são de caráter ilustrativo de nossos projetos e parceiros globais.</p></div>
         </footer>
     </section>
+
+    <script>
+        function abrefechamenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('menu-aberto');
+        }
+    </script>
     </body>
 </html>

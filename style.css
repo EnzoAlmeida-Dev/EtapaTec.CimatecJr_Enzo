@@ -13,6 +13,12 @@
 
  html {
     scroll-behavior: smooth;
+    scroll-padding-top: clamp(2.8rem, 5vw, 3.1rem);
+}
+
+html,
+body {
+    overflow-x: hidden;
 }
 
 .barra {
@@ -20,10 +26,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 48.4px;
+    height: clamp(2.8rem, 5vw, 3.1rem);
     background-color: #e65729;
     color: whitesmoke;
-    padding: 15px;
+    padding: clamp(0.55rem, 1.5vw, 0.95rem);
     display: flex;
     align-items: center;
     z-index: 9999;
@@ -46,20 +52,53 @@
 }
 
 .barra p{
-    margin-left: 25px;
+    margin-left: clamp(0.9rem, 2.8vw, 1.6rem);
 }
 
 .menu{
   position: fixed;
-  right: -200px; 
-  width: 200px;
-  height: 100%;
-  background: #333;
+        top: clamp(2.8rem, 5vw, 3.1rem);
+    left: calc(clamp(11rem, 38vw, 12.5rem) * -1);
+    width: clamp(11rem, 38vw, 12.5rem);
+    height: calc(100% - clamp(2.8rem, 5vw, 3.1rem));
+  background-color: #e65729;
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
   transition: 0.3s; 
-  margin-top: 48.4px 
+  z-index: 9998; 
+}
+
+.menu.menu-aberto {
+    left: 0;
+}
+
+.menu a {
+   font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(0.95rem, 1.6vw, 1.125rem);
+    color: whitesmoke;
+    text-decoration: none;
+    padding: clamp(0.6rem, 1.6vw, 0.8rem) clamp(0.9rem, 2.2vw, 1.25rem);
+    transition: 0.3s;
+}
+
+.menu p{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: clamp(0.82rem, 1.4vw, 0.95rem);
+    margin-top: auto;
+    margin-bottom: clamp(1.4rem, 5vw, 2.5rem);
+     text-align: center;
+    color: whitesmoke;
+    padding: clamp(0.6rem, 1.6vw, 0.8rem) clamp(0.9rem, 2.2vw, 1.25rem);
+}
+
+.menu a:hover {
+    background-color: #841800;
+    color: #9e9e9e;
 }
 
 .intro{
@@ -69,7 +108,7 @@
     background-repeat: no-repeat;
     height: 100vh;
     color: whitesmoke;
-    margin-top: 48.4px;
+    margin-top: clamp(2.8rem, 5vw, 3.1rem);
     position: relative;
 }
 
@@ -84,8 +123,8 @@ abbr {
     font-weight: 900;
     color: #e65729;
     font-style: normal;
-    font-size: 40px;
-    margin-top: 48px;
+    font-size: clamp(1.5rem, 4.2vw, 2.5rem);
+    margin-top: clamp(1.5rem, 5vw, 3rem);
     text-align: center;
 }
 
@@ -93,10 +132,11 @@ abbr {
     display: flex;
     font-family: "Playfair Display", serif;
     font-weight: 650;
-    font-size: 110px;
+    font-size: clamp(2.25rem, 9vw, 6.875rem);
      justify-content: center;
      align-items: center;
-     margin-top: 48.4px;
+     text-align: center;
+     margin-top: clamp(1rem, 3vw, 3rem);
 }
 
 .intro h2{
@@ -104,19 +144,21 @@ abbr {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 48.4px;
+    font-size: clamp(1rem, 2.1vw, 1.35rem);
+    margin-top: clamp(1rem, 3vw, 3rem);
+    padding: 0 clamp(0.9rem, 4vw, 2rem);
 }
 
 .intro a{
     position: absolute;
     left: 50%;
-    bottom: 70px;
+    bottom: clamp(3rem, 12vw, 8rem);
     transform: translateX(-50%);
-    text-decoration: none;
     display: inline-block;
     background-color: #e65729;
     color: whitesmoke;
-    padding: 12px 25px;
+    padding: clamp(0.6rem, 1.8vw, 0.8rem) clamp(1rem, 3.3vw, 1.56rem);
+    font-size: clamp(0.95rem, 1.8vw, 1.15rem);
     text-decoration: none;
     border-radius: 6px;
     transition: 0.3s;
@@ -131,7 +173,7 @@ abbr {
     padding: 0px;
     width: 100%;
     margin: 0px;
-    background-color: #f5f5f5;
+    background-color: whitesmoke;
 }
 
 .gallery h1 {
@@ -139,7 +181,7 @@ abbr {
     text-align: center;
     font-family: "Playfair Display", serif;
     font-weight: 900;
-    font-size: 75px;
+    font-size: clamp(2rem, 6.2vw, 4.7rem);
     margin: 0;
     padding: 0;
 }
@@ -157,7 +199,8 @@ abbr {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: clamp(1rem, 2.1vw, 1.25rem);
+    padding: 0 clamp(0.9rem, 4vw, 1.5rem);
     color: #333;
 }
 
@@ -172,11 +215,11 @@ abbr {
 .gallery img {
     flex: 1 1 calc(45% - 20px);
     max-width: calc(45% - 20px);
-    min-width: 220px;
+    min-width: clamp(11rem, 30vw, 13.75rem);
     height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    margin: 10px;
+    margin: clamp(0.35rem, 1.5vw, 0.65rem);
     transition: 0.3s ease;
     border-radius: 20px;
 }
@@ -186,9 +229,9 @@ abbr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: clamp(0.75rem, 2.2vw, 1.25rem);
     max-width: 100%;
-    padding: 20px;
+    padding: clamp(0.8rem, 3vw, 1.25rem);
     
 }
 
@@ -200,14 +243,14 @@ abbr {
 .cities-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px 30px;
+    gap: clamp(0.5rem, 1.5vw, 0.95rem) clamp(0.9rem, 3vw, 1.9rem);
     max-width: 600px;
-    margin-left: 40px;
-    margin-bottom: 50px;
+    margin-left: clamp(0.9rem, 4.5vw, 2.5rem);
+    margin-bottom: clamp(1.5rem, 5vw, 3.1rem);
 }
 
 .city {
-    font-size: 12px;
+    font-size: clamp(0.72rem, 1.4vw, 0.85rem);
 }
 
 .city::before {
@@ -225,20 +268,20 @@ abbr {
 .map main {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: clamp(0.9rem, 3.2vw, 1.9rem);
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
-    padding: 0 40px 40px;
+    padding: 0 clamp(0.9rem, 4.5vw, 2.5rem) clamp(1.2rem, 4.5vw, 2.5rem);
 }
 
 .map .gallery-text {
-    flex: 1 1 420px;
+    flex: 1 1 clamp(18rem, 45vw, 26rem);
     max-width: 620px;
 }
 
 .map img {
-    flex: 1 1 420px;
+    flex: 1 1 clamp(18rem, 45vw, 26rem);
     max-width: 520px;
     width: 100%;
     height: auto;
@@ -253,21 +296,21 @@ abbr {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: clamp(1rem, 2.1vw, 1.25rem);
     max-width: 700px;
     text-align: justify;
-    margin-top: 12px;
-    margin-left: 40px;
+    margin-top: clamp(0.5rem, 1.5vw, 0.8rem);
+    margin-left: clamp(0.9rem, 4.5vw, 2.5rem);
 }
 
 .map h1 {
     font-family: "Playfair Display", serif;
     font-weight: 900;
-    font-size: 75px;
+    font-size: clamp(2rem, 6.2vw, 4.7rem);
     margin: 0;
     padding: 0;
     text-align: left;
-    margin-left: 40px;
+    margin-left: clamp(0.9rem, 4.5vw, 2.5rem);
 }
 
 .map .expt{
@@ -275,15 +318,15 @@ abbr {
     font-weight: 400;
     font-style: normal;
     max-width: 700px;
-    font-size: 20px;
+    font-size: clamp(1rem, 2.1vw, 1.25rem);
     text-align: left;
-    margin-top: 50px;
-    margin-bottom: 75px;
+    margin-top: clamp(1.2rem, 4.2vw, 3.1rem);
+    margin-bottom: clamp(1.8rem, 6.5vw, 4.7rem);
     display: inline-block;
     background-color: #e65729;
-    padding: 12px 25px;
+    padding: clamp(0.6rem, 1.8vw, 0.8rem) clamp(1rem, 3.3vw, 1.56rem);
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: clamp(0.8rem, 2vw, 1.25rem);
 }
 
 .donate{
@@ -291,45 +334,44 @@ abbr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: clamp(1rem, 2.8vw, 2rem);
+    padding: clamp(3.2rem, 8vw, 5rem) clamp(0.9rem, 4vw, 1.5rem) clamp(2rem, 6vw, 3.5rem);
     background-image: url("img/donateebg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .donate main {
-  width: 100%;
-  text-align: center;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1rem, 2.8vw, 2rem);
 }
 
 .donate h1 {
-        position: absolute;
-        top: 85px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 0;
-        text-align: center;
-        width: 100%;
-        font-family: "Playfair Display", serif;
-        font-weight: 900;
-        font-size: 65px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    font-size: clamp(2.1rem, 6vw, 4.06rem);
 }
 
 .donate h2 {
-        position: absolute;
-        top: 195px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 0;
-        text-align: center;
-        width: 100%;
-        font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1rem, 2.1vw, 1.25rem);
+    padding: 0 clamp(0.9rem, 4vw, 1.5rem);
 
 }
 
@@ -337,7 +379,7 @@ abbr {
     color: #e65729;
     font-family: "Playfair Display", serif;
   font-weight: 900;
-  font-size: 65px;
+    font-size: clamp(2.1rem, 6vw, 4.06rem);
   margin: 0;
   padding: 0;
 }
@@ -347,9 +389,9 @@ abbr {
     background-color: #e65729;
     color: whitesmoke;
     text-decoration: none;
-    font-size: 30px;
-    padding: 12px 25px;
-    border-radius: 20px;
+    font-size: clamp(1rem, 3.2vw, 1.9rem);
+    padding: clamp(0.6rem, 1.8vw, 0.8rem) clamp(1rem, 3.3vw, 1.56rem);
+    border-radius: clamp(0.8rem, 2vw, 1.25rem);
     transition: 0.3s ease;
 }
 .donate .btn:hover {
@@ -360,15 +402,16 @@ abbr {
     background-color: #333333;
     color: whitesmoke;
     display: flex;
-    padding: 40px 20px;
+    padding: clamp(1.2rem, 4.5vw, 2.5rem) clamp(0.9rem, 3vw, 1.25rem);
 }
 
 .rodape footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px 30px;
-    margin-left: 40px;
-    margin-bottom: 50px;
+    gap: clamp(0.6rem, 1.7vw, 0.95rem) clamp(1rem, 3.2vw, 1.9rem);
+    width: 100%;
+    margin-left: clamp(0.9rem, 4.5vw, 2.5rem);
+    margin-bottom: clamp(1.5rem, 5vw, 3.1rem);
 }
 
 .rodape div{
@@ -379,8 +422,8 @@ abbr {
 .rodape h3 {
     font-family: "Playfair Display", serif;
     font-weight: 900;
-    font-size: 25px;
-    margin-bottom: 12px;
+    font-size: clamp(1.2rem, 2.6vw, 1.56rem);
+    margin-bottom: clamp(0.5rem, 1.5vw, 0.8rem);
 }
 
 .rodape p {
@@ -388,5 +431,32 @@ abbr {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: clamp(0.92rem, 1.7vw, 1rem);
 }
+
+@media (max-width: 445px) {
+    .rodape footer {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .cities-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .map p,
+    .map h1,
+    .map .expt {
+        margin-left: 0;
+    }
+}
+
+img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+
