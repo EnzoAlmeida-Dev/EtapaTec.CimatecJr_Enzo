@@ -12,6 +12,6 @@ Este repositório foi criado com o intuito de organizar e preparar o envio do pr
 
 • Tecnologias utilizadas: VS Code, HTML, CSS, JavaScript e FIGMA.
 
-• Link do projeto hospedado:
+• Link do projeto hospedado: https://etapa-tec-cimatec-jr-enzo.vercel.app/main_page/index.html
 
 • Link do protótipo no Figma: https://www.figma.com/make/Zs9ZE89I2iCXZWCqu3TjjI/Projeto-Mesa-Viva---Cimatec-Jr.?t=yHApGBTz2p5TgMFd-1
