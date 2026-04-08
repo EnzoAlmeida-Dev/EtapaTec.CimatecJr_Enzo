@@ -496,6 +496,30 @@ abbr {
     }
 }
 
+.fade-item {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(2px);
+    transition: opacity 620ms ease, transform 620ms ease, filter 620ms ease;
+    will-change: opacity, transform, filter;
+}
+
+.fade-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-item,
+    .fade-visible {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+    }
+}
+
 img {
 max-width: 100%;
 height: auto;

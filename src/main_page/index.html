@@ -69,7 +69,7 @@
             <div class="city">Rio Grande, RS</div>
         </div>
         </div>
-        <div class="gallery-image"></div><img src="/img/Screenshot_2026-04-01_121246-removebg-preview.png" alt="Mapa com as cidades onde o projeto atua">
+        <div class="gallery-image"></div><img src="img/Screenshot_2026-04-01_121246-removebg-preview.png" alt="Mapa com as cidades onde o projeto atua">
         </main>
     </section>
     <section id="donate" class="donate">
@@ -100,6 +100,44 @@
             const menu = document.getElementById('menu');
             menu.classList.toggle('menu-aberto');
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const targets = document.querySelectorAll(
+                '.intro header, .intro main, .gallery h1, .gallery p, .gallery img, .map header, .map .gallery-text, .map img, .donate header, .donate main, .donate footer, .rodape div'
+            );
+
+            if (prefersReducedMotion) {
+                targets.forEach(function (el) {
+                    el.classList.add('fade-visible');
+                });
+                return;
+            }
+
+            targets.forEach(function (el, index) {
+                el.classList.add('fade-item');
+                el.style.transitionDelay = (index % 6) * 70 + 'ms';
+            });
+
+            const observer = new IntersectionObserver(
+                function (entries, obs) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('fade-visible');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.16,
+                    rootMargin: '0px 0px -8% 0px'
+                }
+            );
+
+            targets.forEach(function (el) {
+                observer.observe(el);
+            });
+        });
     </script>
     </body>
 </html>
