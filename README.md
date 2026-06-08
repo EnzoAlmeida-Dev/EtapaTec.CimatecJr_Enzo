@@ -6,7 +6,7 @@
 </p>
 
 # Descrição 🧾
-    Este repositório foi criado com o intuito de organizar e preparar o envio do projeto solicitado pelo Núcleo de Projetos de Computação (NPCP) da empresa júnior do SENAI CIMATEC. 
+Este repositório foi criado com o intuito de organizar e preparar o envio do projeto solicitado pelo Núcleo de Projetos de Computação (NPCP) da empresa júnior do SENAI CIMATEC. 
 
 O Projeto Mesa Viva trata-se de uma iniciativa voltada para o combate à fome no Brasil, atuando fortemente em áreas críticas do país e conscientizando a população sobre a importância da doação e contribuição de cada cidadão.
 
@@ -63,10 +63,10 @@ O Projeto Mesa Viva trata-se de uma iniciativa voltada para o combate à fome no
 
 ```bash
 # Clone o repositório na sua máquina
-git clone https://github.com/alcehub/LandingPage-Cimatecjr
+git clone https://github.com/EnzoAlmeida-Dev/EtapaTec.CimatecJr_Enzo
 
 # Acesse a pasta
-cd LandingPage-Cimatecjr
+cd EtapaTec.CimatecJr_Enzo
 
 # Abra a pasta no Visual Studio Code
 
@@ -78,7 +78,7 @@ cd LandingPage-Cimatecjr
 # Organização 🗃️
 
 <pre>
-LandingPage-Cimatecjr/
+EtapaTec.CimatecJr_Enzo/
 ├── src
 |    |── donate_page/
 │    |    |── donate.html
