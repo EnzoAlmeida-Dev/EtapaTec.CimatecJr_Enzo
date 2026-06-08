@@ -98,3 +98,14 @@ EtapaTec.CimatecJr_Enzo/
 ├── LICENSE
 └── README.md (<span style="color: red;"><b>Você está aqui!</b></span>)
 </pre>
+
+<br>
+<br>
+
+# Autoria 👨‍💻
+<td align="center">
+      <a href="https://github.com/EnzoAlmeida-Dev">
+        <img src="https://github.com/EnzoAlmeida-Dev.png" width="80px" style="border-radius: 50%;" /><br />
+        <sub><b>Enzo Almeida</b></sub>
+      </a>
+    </td>
